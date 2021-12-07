@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_moodSetter/templates *
+recursive-include octoprint_moodSetter/translations *
+recursive-include octoprint_moodSetter/static *

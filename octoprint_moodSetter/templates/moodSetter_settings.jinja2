@@ -1,0 +1,21 @@
+<form class="form-horizontal">
+	<h3>MoodSetter settings</h3>
+	<div class="control-group">
+		<label class="control-label">{{ _('Light PIN') }}</label>
+		<div class="controls">
+			<input id="light_pin-input" type="number" min="1" max="40" class="input-small" data-bind="value: settings.plugins.moodSetter.light_pin">
+		</div>
+
+		<label class="control-label">{{ _('Brightness') }}</label>
+		<div class="controls">
+			<input id="brightness_val-input" type="number" min="0" max="100" class="input-small" data-bind="value: settings.plugins.moodSetter.brightness_val">
+		</div>
+
+		<div class="controls">
+			<label class="checkbox">
+				<input type="checkbox" data-bind="checked: settings.plugins.moodSetter.inverted_output">
+				{{ _('Inverted output') }}
+			</label>
+		</div>
+	</div>
+</form>
