@@ -58,6 +58,7 @@ class MoodSetterPlugin(
                 # Setting the default state of pin
                 GPIO.setup(int(self._settings.get(["light_pin"])), GPIO.OUT)
                 pwm = GPIO.PWM(int(self._settings.get(["light_pin"])), int(self._settings.get(["brightness_val"])))
+                pwm.start(0)
                 
                 if bool(self._settings.get(["inverted_output"])):
                         pwm.ChangeDutyCycle(int(self._settings.get(["brightness_val"])))
@@ -82,6 +83,7 @@ class MoodSetterPlugin(
                 # Sets the GPIO every time, if user changed it in the settings.
                 GPIO.setup(int(self._settings.get(["light_pin"])), GPIO.OUT)
                 pwm = GPIO.PWM(int(self._settings.get(["light_pin"])), int(self._settings.get(["brightness_val"])))
+                pwm.start(0)
 
                 self.light_state = not self.light_state
 
